@@ -17,8 +17,10 @@ Zotero.ZotLibUpdater = {
 		var collection = ZoteroPane.getSelectedCollection();
 		var items = collection.getChildItems();
 		var results = [];
-		var colName = collection.key;
-		var outputPath =OS.Path.join('D:\\inetpub\\wwwroot\\library\\resource\\', 'ZoteroAppDB_' + colName + '.dat');
+		var colKey = collection.key;
+		var colFullName = collection.name;
+		
+		var outputPath =OS.Path.join('D:\\inetpub\\wwwroot\\library\\resource\\', 'ZoteroAppDB_' + colKey + '.dat');
 		
 		for (let i = 0; i < items.length; i++) {
 			var item = items[i];
