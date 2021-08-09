@@ -5,7 +5,7 @@ Zotero.ZotLibUpdater = {
 				
 		// Register the callback in Zotero as an item observer
 		var notifierID = Zotero.Notifier.registerObserver(this.notifierCallback, ['item']);
-		
+		console.log('ZotLibUpdater init.');
 		// Unregister callback when the window closes (important to avoid a memory leak)
 		window.addEventListener('unload', function(e) {
 				Zotero.Notifier.unregisterObserver(notifierID);
@@ -17,8 +17,8 @@ Zotero.ZotLibUpdater = {
 		var collection = ZoteroPane.getSelectedCollection();
 		var items = collection.getChildItems();
 		var results = [];
-
-		var outputPath =OS.Path.join('D:\\inetpub\\wwwroot\\library\\resource\\', 'ZoteroAppDB_1.dat');
+		var colName = collection.key;
+		var outputPath =OS.Path.join('D:\\inetpub\\wwwroot\\library\\resource\\', 'ZoteroAppDB_' + colName + '.dat');
 		
 		for (let i = 0; i < items.length; i++) {
 			var item = items[i];

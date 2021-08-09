@@ -4,10 +4,10 @@
 	
 	<Description about="urn:mozilla:install-manifest">
 		<em:id>helloworld@zotero.org</em:id>
-		<em:name>Hello World Plugin for Zotero</em:name>
-		<em:version>1.0.4.SVN</em:version>
-		<em:description>A sample plugin for Zotero</em:description>
-		<em:creator>Center for History and New Media<br/>George Mason University</em:creator>
+		<em:name>ZotLibrary DB Updater Plugin</em:name>
+		<em:version>1.0</em:version>
+		<em:description>DB Updater plugin for Zotero</em:description>
+		<em:creator>Basil J. Paudel<br/>University of Pittsburgh</em:creator>
 		<em:updateURL>https://www.zotero.org/download/plugins.rdf</em:updateURL>
 		<em:type>2</em:type> <!-- type=extension -->
 		
@@ -18,7 +18,7 @@
 				<em:name>Zotero</em:name>
 				<em:homepageURL>http://www.zotero.org</em:homepageURL>
 				<em:minVersion>3.0</em:minVersion>
-				<em:maxVersion>4.0.*</em:maxVersion>
+				<em:maxVersion>6.0.*</em:maxVersion>
 			</Description>
 		</em:requires>
     
@@ -27,14 +27,14 @@
 			<Description>
 				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
 				<em:minVersion>17.0</em:minVersion>
-				<em:maxVersion>23.*</em:maxVersion>
+				<em:maxVersion>100.*</em:maxVersion>
 			</Description>
 		</em:targetApplication>
 		<em:targetApplication>
 			<Description>
 				<em:id>zotero@chnm.gmu.edu</em:id>
 				<em:minVersion>3.0</em:minVersion>
-				<em:maxVersion>4.0.*</em:maxVersion>
+				<em:maxVersion>6.0.*</em:maxVersion>
 			</Description>
 		</em:targetApplication>
 	</Description>
