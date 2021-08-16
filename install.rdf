@@ -5,7 +5,7 @@
 	<Description about="urn:mozilla:install-manifest">
 		<em:id>helloworld@zotero.org</em:id>
 		<em:name>ZotLibrary DB Updater Plugin</em:name>
-		<em:version>1.0.1</em:version>
+		<em:version>1.0.2</em:version>
 		<em:description>DB Updater plugin for Zotero</em:description>
 		<em:creator>Basil J. Paudel<br/>University of Pittsburgh</em:creator>
 		<em:updateURL>https://www.zotero.org/download/plugins.rdf</em:updateURL>
