@@ -35,6 +35,12 @@ Zotero.ZotLibUpdater = {
 					// We could grab attachments:
 					let attachmentIDs = item.getAttachments();
 					attachment = Zotero.Items.get(attachmentIDs[0]);
+                    
+                    // Check if attachment is NULL
+                    if (attachment == null){
+                        console.log('Null attachment', item);
+                        
+                    }
 					let attPath = attachment.getFilePath();
 					
 					var myTag = "bjpServerTag";
