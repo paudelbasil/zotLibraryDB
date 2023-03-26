@@ -2,8 +2,7 @@
 <?xml-stylesheet href="chrome://zotlibupdater/skin/overlay.css" type="text/css"?>
 <!DOCTYPE window SYSTEM "chrome://zotlibupdater/locale/hello.dtd">
 
-<overlay id="zotlibupdater-overlay"
-	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<overlay id="zotlibupdater-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 	
 	<stringbundleset id="stringbundleset">
 		<stringbundle id="hello-world-zotero-strings"
@@ -12,11 +11,7 @@
     
     <popup id="zotero-collectionmenu">
         <menuseparator />
-        <menuitem class="menuitem-iconic"
-                  image="chrome://"
-                  id="zotero-collectionmenu-zotlibdb"
-                  label="Update ZotLibrary Server"
-                  oncommand="Zotero.ZotLibUpdater.updateWebAppDB()" />
+        <menuitem label="Update ZotLibrary Server" oncommand="Zotero.ZotLibUpdater.updateWebAppDB()" />
     </popup>
 	
 	<menupopup id="zotero-tb-actions-popup">
