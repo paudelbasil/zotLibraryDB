@@ -11,7 +11,7 @@
     
     <popup id="zotero-collectionmenu">
         <menuseparator />
-        <menuitem label="Update ZotLibrary Server" oncommand="Zotero.ZotLibUpdater.updateWebAppDB()" />
+        <menuitem icon="chrome://zotlibupdater/icon.png" label="Update ZotLibrary Server" oncommand="Zotero.ZotLibUpdater.updateWebAppDB()" />
     </popup>
 	
 	<menupopup id="zotero-tb-actions-popup">
