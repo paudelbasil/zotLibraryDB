@@ -25,7 +25,7 @@ Zotero.ZotLibUpdater = {
 		for (let i = 0; i < items.length; i++) {
 			var item = items[i];
 			var attachment;
-
+            try{
 			// Proceed if an item is selected and it isn't a note
 			if (item && !item.isNote()) {
 				if (item.isAttachment()) {
@@ -58,6 +58,9 @@ Zotero.ZotLibUpdater = {
 					//item.setField('libraryCatalog',attPath.toString());
 				}
 			}
+            }catch(err) {
+                console.log('ZotLibrary Error:', err.message);
+            }
 		}
 
 		var txtToAppend='';
