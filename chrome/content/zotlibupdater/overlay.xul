@@ -9,12 +9,20 @@
 		<stringbundle id="hello-world-zotero-strings"
 			src="chrome://zotlibupdater/locale/hello.properties"/>
 	</stringbundleset>
+    
+    <popup id="zotero-collectionmenu">
+        <menuseparator />
+        <menuitem class="menuitem-iconic"
+                  image="chrome://"
+                  id="zotero-collectionmenu-zotlibdb"
+                  label="Update ZotLibrary Server"
+                  oncommand="Zotero.ZotLibUpdater.updateWebAppDB()" />
+    </popup>
 	
 	<menupopup id="zotero-tb-actions-popup">
 		<!-- Make sure the menu separator for utilities is visible -->
-		<menuseparator id="zotero-tb-actions-plugins-separator" hidden="false"/>
-		<menuitem insertbefore="zotero-tb-actions-plugins-separator" label="&zotlibupdater.name;"
-			oncommand="Zotero.ZotLibUpdater.updateWebAppDB()"/>
+		<menuseparator />
+		<menuitem label="Update ZotLibrary Database" oncommand="Zotero.ZotLibUpdater.updateWebAppDB()"/>
 	</menupopup>
 	
 	<!-- Include the main extension logic -->
