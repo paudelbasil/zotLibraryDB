@@ -5,7 +5,6 @@
         {
           "version": "2.0.1",
           "update_link": "https://github.com/paudelbasil/zotLibraryDB/raw/develop_v7/zotLibDB.zip",
-          "update_hash": "",
           "applications": {
             "zotero": {
               "strict_min_version": "7.0"
