@@ -1,0 +1,15 @@
+{
+	"manifest_version": 2,
+	"name": "ZotLibUpdater",
+	"version": "2.0",
+	"description": "Zotero Library Updater - Basil",
+	"homepage_url": "https://github.com/paudelbasil/zotLibraryDB/",
+	"applications": {
+		"zotero": {
+			"id": "zotlibupdater@paudels.com",
+			"update_url": "https://github.com/paudelbasil/zotLibraryDB/raw/main/updates-2.0.json",
+			"strict_min_version": "7.0",
+			"strict_max_version": "7.1.*"
+		}
+	}
+}
