@@ -14,7 +14,7 @@ async function startup({ id, version, rootURI }) {
 	Zotero.PreferencePanes.register({
 		pluginID: 'zotlibupdater@paudels.com',
 		src: rootURI + 'preferences.xhtml',
-		scripts: [rootURI + 'prefs.js']
+		scripts: [rootURI + 'preferences.js']
 	});
 	
 	Services.scriptloader.loadSubScript(rootURI + 'main.js');
