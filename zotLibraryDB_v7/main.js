@@ -47,8 +47,9 @@ ZotLibUpdater = {
         // Add menu option
 		let menuitem = doc.createXULElement('menuitem');
 		menuitem.id = 'databasepath';
-		menuitem.setAttribute('type', 'checkbox');
 		menuitem.setAttribute('data-l10n-id', 'zlu-target-data-path');
+        menuitem.setAttribute('data-l10n-args', JSON.stringify({ text: 'Target Path' }));
+        
 		// MozMenuItem#checked is available in Zotero 7
 		menuitem.addEventListener('command', () => {
 			ZotLibUpdater.setTargetPath(null);
