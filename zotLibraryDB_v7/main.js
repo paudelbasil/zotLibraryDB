@@ -28,7 +28,12 @@ ZotLibUpdater = {
 				
 		// Register the callback in Zotero as an item observer
 		this.notifierID = Zotero.Notifier.registerObserver(this.notifierCallback, ['item']);
-		this.addToAllWindows();
+        try{
+            this.addToAllWindows();
+        }catch(err){
+            
+            this.log('Error creating preferences : ' + err.message);
+        }
         this.log('ZotLibUpdater initialized.');
 		
 	},    
@@ -43,7 +48,7 @@ ZotLibUpdater = {
 		let menuitem = doc.createXULElement('menuitem');
 		menuitem.id = 'databasepath';
 		menuitem.setAttribute('type', 'checkbox');
-		menuitem.setAttribute('data-l10n-id', 'target-data-path');
+		menuitem.setAttribute('data-l10n-id', 'zlu-target-data-path');
 		// MozMenuItem#checked is available in Zotero 7
 		menuitem.addEventListener('command', () => {
 			ZotLibUpdater.setTargetPath(null);

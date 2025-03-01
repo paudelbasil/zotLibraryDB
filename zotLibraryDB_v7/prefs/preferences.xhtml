@@ -8,13 +8,14 @@
     <html:link rel="localization" href="zotlibupdater.ftl"/>
 </linkset>
 
-<vbox onload="Zotero.ZotLibUpdater.Prefs.init();">
+<!-- <vbox onload="Zotero.ZotLibUpdater.Prefs.init();"> -->
+
+<vbox>
     <groupbox>
         <vbox>
             <label><html:h2 data-l10n-id="zlu-settings-title"></html:h2></label>
             <hbox align="center">
-                <html:input type="text" id="target-data-path" readonly="true" preference="extensions.zotlibupdater.updatepath" style="flex: 1; margin-left: 0;"/>
-                <!-- <button data-l10n-id="zlu-settings-dir-label" oncommand="Zotero.ZotLibUpdater.Prefs.pickDirectory();"/> -->
+                <html:input type="text" id="zlu-target-data-path" readonly="true" preference="extensions.zotlibupdater.updatepath" style="flex: 1; margin-left: 0;"/>                
             </hbox>
         </vbox>
     </groupbox>  

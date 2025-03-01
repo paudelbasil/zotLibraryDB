@@ -1,5 +1,5 @@
 zlu-settings-title = ZotLibUpdater Settings
-target-data-path =
+zlu-target-data-path =
     .label = Output file path
 
 zlu-settings-dir-label = 
