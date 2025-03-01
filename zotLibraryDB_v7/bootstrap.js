@@ -12,11 +12,12 @@ async function startup({ id, version, resourceURI, rootURI=resourceURI.spec }) {
 	log("Starting ZotLibUpdater 2.0");
 	
     try{
-        Zotero.PreferencePanes.register({
-            pluginID: 'zotlibupdater@paudels.com',
-            src: rootURI + 'prefs/preferences.xhtml',
-            scripts: [rootURI + 'prefs/preferences.js']
-        });
+        // Zotero.PreferencePanes.register({
+            // id: 'zotlibupdater_prefs_main',
+            // pluginID: 'zotlibupdater@paudels.com',
+            // src: rootURI + 'prefs/preferences.xhtml',
+            // scripts: [rootURI + 'prefs/preferences.js']
+        // });
     }catch(err){
         log("Error loading preferences :" + err.message);
     }

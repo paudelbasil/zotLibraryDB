@@ -3,7 +3,7 @@
     "zotlibupdater@paudels.com": {
       "updates": [
         {
-          "version": "2.0.6",
+          "version": "2.0.8",
           "update_link": "https://github.com/paudelbasil/zotLibraryDB/raw/develop_v7/zotLibDB.zip",
           "applications": {
             "zotero": {

@@ -42,7 +42,7 @@ ZotLibUpdater = {
         let doc = window.document;
         try{
             // Use Fluent for localization
-            window.MozXULElement.insertFTLIfNeeded("zotlibupdater.ftl");
+            //window.MozXULElement.insertFTLIfNeeded("zotlibupdater.ftl");
                     
             // Add menu option
             let menuitem = doc.createXULElement('menuitem');
@@ -54,7 +54,7 @@ ZotLibUpdater = {
             menuitem.addEventListener('command', () => {
                 ZotLibUpdater.setTargetPath(null);
             });
-            doc.getElementById('menu_viewPopup').appendChild(menuitem);
+            //doc.getElementById('menu_viewPopup').appendChild(menuitem);
             this.storeAddedElement(menuitem);
         }catch(err){
              this.log('Error creating preferences :' + err.message);

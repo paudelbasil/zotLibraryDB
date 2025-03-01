@@ -8,6 +8,11 @@ class ZotLibUpdaterPrefs {
         
     }
     
+    init(){
+        
+        
+    }
+    
 }
 
 // Expose to Zotero
