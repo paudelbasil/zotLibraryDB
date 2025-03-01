@@ -8,14 +8,18 @@ function install() {
 	log("Installed ZotLibUpdater 2.0");
 }
 
-async function startup({ id, version, rootURI }) {
+async function startup({ id, version, resourceURI, rootURI=resourceURI.spec }) {
 	log("Starting ZotLibUpdater 2.0");
 	
-	Zotero.PreferencePanes.register({
-		pluginID: 'zotlibupdater@paudels.com',
-		src: rootURI + 'prefs/preferences.xhtml',
-		scripts: [rootURI + 'prefs/preferences.js']
-	});
+    try{
+        Zotero.PreferencePanes.register({
+            pluginID: 'zotlibupdater@paudels.com',
+            src: rootURI + 'prefs/preferences.xhtml',
+            scripts: [rootURI + 'prefs/preferences.js']
+        });
+    }catch(err){
+        log("Error loading preferences :" + err.message);
+    }
 	
 	Services.scriptloader.loadSubScript(rootURI + 'main.js');
 	ZotLibUpdater.init({ id, version, rootURI });
