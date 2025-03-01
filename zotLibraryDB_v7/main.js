@@ -40,22 +40,25 @@ ZotLibUpdater = {
     
     createPrefsItem(window){
         let doc = window.document;
-        
-        // Use Fluent for localization
-		window.MozXULElement.insertFTLIfNeeded("zotlibupdater.ftl");
-		        
-        // Add menu option
-		let menuitem = doc.createXULElement('menuitem');
-		menuitem.id = 'databasepath';
-		menuitem.setAttribute('data-l10n-id', 'zlu-target-data-path');
-        menuitem.setAttribute('data-l10n-args', JSON.stringify({ text: 'Target Path' }));
-        
-		// MozMenuItem#checked is available in Zotero 7
-		menuitem.addEventListener('command', () => {
-			ZotLibUpdater.setTargetPath(null);
-		});
-		doc.getElementById('menu_viewPopup').appendChild(menuitem);
-		this.storeAddedElement(menuitem);
+        try{
+            // Use Fluent for localization
+            window.MozXULElement.insertFTLIfNeeded("zotlibupdater.ftl");
+                    
+            // Add menu option
+            let menuitem = doc.createXULElement('menuitem');
+            menuitem.id = 'databasepath';
+            menuitem.setAttribute('data-l10n-id', 'zlu-target-data-path');
+            menuitem.setAttribute('data-l10n-args', JSON.stringify({ text: 'Target Path' }));
+            
+            // MozMenuItem#checked is available in Zotero 7
+            menuitem.addEventListener('command', () => {
+                ZotLibUpdater.setTargetPath(null);
+            });
+            doc.getElementById('menu_viewPopup').appendChild(menuitem);
+            this.storeAddedElement(menuitem);
+        }catch(err){
+             this.log('Error creating preferences :' + err.message);
+        }
     },
     
 	init({ id, version, rootURI }) {
